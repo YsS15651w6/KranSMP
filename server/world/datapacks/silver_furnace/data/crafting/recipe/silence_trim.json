@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#W#",
+        "SDS",
+        "#W#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:sculk"
+        },
+        "W": {
+            "item": "minecraft:white_wool"
+        },
+        "S": {
+            "item": "minecraft:sculk_vein"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "id": "minecraft:silence_armor_trim_smithing_template",
+        "count": 1
+    }
+}

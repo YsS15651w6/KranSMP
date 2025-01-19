@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#PC",
+        "BDB",
+        "CP#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_nugget"
+        },
+        "P": {
+            "item": "minecraft:polished_blackstone_bricks"
+        },
+        "C": {
+            "item": "minecraft:cooked_porkchop"
+        },
+        "B": {
+            "item": "minecraft:blackstone"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "id": "minecraft:snout_armor_trim_smithing_template",
+        "count": 1
+    }
+}

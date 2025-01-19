@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#S#",
+        "SDS",
+        "#B#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gravel"
+        },
+        "S": {
+            "item": "minecraft:sand"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        },
+        "B": {
+            "item": "minecraft:brush"
+        }
+    },
+    "result": {
+        "id": "minecraft:wayfinder_armor_trim_smithing_template",
+        "count": 1
+    }
+}

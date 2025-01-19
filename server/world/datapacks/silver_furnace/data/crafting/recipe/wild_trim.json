@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#T#",
+        "DND",
+        "#T#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:mossy_cobblestone"
+        },
+        "T": {
+            "item": "minecraft:tripwire_hook"
+        },
+        "D": {
+            "item": "minecraft:dispenser"
+        },
+        "N": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "id": "minecraft:wild_armor_trim_smithing_template",
+        "count": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#C#",
+        "BDB",
+        "C#C"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:breeze_rod"
+        },
+        "C": {
+            "item": "minecraft:copper_block"
+        },
+        "B": {
+            "item": "minecraft:blue_dye"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "id": "minecraft:flow_armor_trim_smithing_template",
+        "count": 1
+    }
+}

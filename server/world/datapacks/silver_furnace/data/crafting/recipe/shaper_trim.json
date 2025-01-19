@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#B#",
+        "GD#",
+        "GGG"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:sand"
+        },
+        "B": {
+            "item": "minecraft:brush"
+        },
+        "G": {
+            "item": "minecraft:gravel"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "id": "minecraft:shaper_armor_trim_smithing_template",
+        "count": 1
+    }
+}

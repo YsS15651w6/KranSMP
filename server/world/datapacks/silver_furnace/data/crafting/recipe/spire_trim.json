@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#P#",
+        "PDP",
+        "EPE"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:ender_pearl"
+        },
+        "P": {
+            "item": "minecraft:purpur_block"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        },
+        "E": {
+            "item": "minecraft:end_stone_bricks"
+        }
+    },
+    "result": {
+        "id": "minecraft:spire_armor_trim_smithing_template",
+        "count": 1
+    }
+}

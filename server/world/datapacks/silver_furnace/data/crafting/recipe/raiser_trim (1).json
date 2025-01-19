@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#G#",
+        "GDG",
+        "#B#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:sand"
+        },
+        "G": {
+            "item": "minecraft:gravel"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        },
+        "B": {
+            "item": "minecraft:brush"
+        }
+    },
+    "result": {
+        "id": "minecraft:raiser_armor_trim_smithing_template",
+        "count": 1
+    }
+}

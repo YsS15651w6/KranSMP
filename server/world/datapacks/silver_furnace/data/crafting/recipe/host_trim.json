@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#DS",
+        "SSS"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gravel"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        },
+        "S": {
+            "item": "minecraft:sand"
+        }
+    },
+    "result": {
+        "id": "minecraft:host_armor_trim_smithing_template",
+        "count": 1
+    }
+}

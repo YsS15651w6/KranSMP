@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#N#",
+        "BDB",
+        "#N#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:nether_bricks"
+        },
+        "N": {
+            "item": "minecraft:netherrack"
+        },
+        "B": {
+            "item": "minecraft:blaze_powder"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "id": "minecraft:rib_armor_trim_smithing_template",
+        "count": 1
+    }
+}
