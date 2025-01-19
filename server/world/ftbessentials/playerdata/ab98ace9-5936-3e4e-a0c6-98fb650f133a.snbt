@@ -1,0 +1,24 @@
+{
+	muted: false
+	fly: false
+	god: false
+	nick: "Spoerman"
+	last_seen: { dim: "minecraft:overworld", x: 3, y: 76, z: 40, time: 1737137734716L, xRot: 10.799979f, yRot: 126.9001f }
+	recording: "none"
+	teleport_history: [
+		{ dim: "minecraft:overworld", x: -33, y: 84, z: 11, time: 1737118331028L, xRot: 50.700172f, yRot: -13.95032f }
+		{ dim: "minecraft:overworld", x: 4, y: 79, z: -42, time: 1737123129655L, xRot: 16.799921f, yRot: 54.1485f }
+		{ dim: "minecraft:overworld", x: -24, y: 68, z: -74, time: 1737124834680L, xRot: 2.549946f, yRot: 91.829834f }
+		{ dim: "minecraft:overworld", x: 10, y: 81, z: -22, time: 1737124974810L, xRot: 17.850058f, yRot: -68.92697f }
+		{ dim: "minecraft:overworld", x: -4, y: 79, z: -86, time: 1737126255158L, xRot: 20.700014f, yRot: -148.94324f }
+		{ dim: "minecraft:overworld", x: 3785, y: -52, z: -5532, time: 1737127077395L, xRot: 16.350124f, yRot: -162.36365f }
+		{ dim: "minecraft:overworld", x: 3702, y: -34, z: -5352, time: 1737127291008L, xRot: 56.61887f, yRot: 82.66705f }
+		{ dim: "minecraft:overworld", x: 3, y: 79, z: -76, time: 1737134869901L, xRot: -2.550045f, yRot: 6.138454f }
+		{ dim: "minecraft:overworld", x: 48, y: -12, z: -118, time: 1737137193892L, xRot: 38.250057f, yRot: -149.7095f }
+		{ dim: "minecraft:overworld", x: 2461, y: -59, z: 78, time: 1737137715204L, xRot: 8.849945f, yRot: -121.334595f }
+	]
+	homes: {
+		goldfarm: { dim: "minecraft:the_nether", x: 25, y: 231, z: -6, time: 1735674505494L, xRot: 28.200048f, yRot: 89.09972f }
+	}
+	kit_use_times: { }
+}
