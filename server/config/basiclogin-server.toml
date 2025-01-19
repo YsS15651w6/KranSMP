@@ -1,0 +1,2 @@
+#The duration you have to login within in seconds
+timeout = 100
