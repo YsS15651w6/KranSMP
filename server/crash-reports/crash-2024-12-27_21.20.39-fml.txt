@@ -1,0 +1,153 @@
+---- Minecraft Crash Report ----
+// I just don't know what went wrong :(
+
+Time: 2024-12-27 21:20:39
+Description: Mod loading failures have occurred; consult the issue messages for more details
+
+net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: main
+Stacktrace:
+	at TRANSFORMER/watermedia@2.1.9/org.watermedia.loaders.NeoForgeLoader.<init>(NeoForgeLoader.java:24) ~[watermedia-2.1.9.jar%23193!/:2.1.9] {re:classloading}
+-- Mod loading issue for: watermedia --
+Details:
+	Caused by 0: java.lang.RuntimeException: Failed starting WATERMeDIA for NeoForge: WATERMeDIA CANNOT be installed YET on SERVER-SIDE. Please remove WATERMeDIA from the server, and keep it on client
+		at TRANSFORMER/watermedia@2.1.9/org.watermedia.loaders.NeoForgeLoader.<init>(NeoForgeLoader.java:26) ~[watermedia-2.1.9.jar%23193!/:2.1.9] {re:classloading}
+		at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?] {}
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?] {}
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:115) ~[loader-4.0.34.jar%2360!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModLoader.lambda$constructMods$3(ModLoader.java:153) ~[loader-4.0.34.jar%2360!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModLoader.lambda$dispatchParallelTask$7(ModLoader.java:231) ~[loader-4.0.34.jar%2360!/:4.0] {}
+		at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?] {}
+		at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?] {}
+		at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[?:?] {}
+
+	Mod file: /server/mods/watermedia-2.1.9.jar
+	Failure message: WaterMedia (watermedia) has failed to load correctly
+		java.lang.RuntimeException: Failed starting WATERMeDIA for NeoForge: WATERMeDIA CANNOT be installed YET on SERVER-SIDE. Please remove WATERMeDIA from the server, and keep it on client
+	Mod version: 2.1.9
+	Mod issues URL: https://github.com/WaterMediaTeam/watermedia/issues
+	Exception message: org.watermedia.core.exceptions.IllegalEnvironmentException: WATERMeDIA CANNOT be installed YET on SERVER-SIDE. Please remove WATERMeDIA from the server, and keep it on client
+Stacktrace:
+	at TRANSFORMER/watermedia@2.1.9/org.watermedia.loaders.NeoForgeLoader.<init>(NeoForgeLoader.java:24) ~[watermedia-2.1.9.jar%23193!/:2.1.9] {re:classloading}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?] {}
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?] {}
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:115) ~[loader-4.0.34.jar%2360!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModLoader.lambda$constructMods$3(ModLoader.java:153) ~[loader-4.0.34.jar%2360!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModLoader.lambda$dispatchParallelTask$7(ModLoader.java:231) ~[loader-4.0.34.jar%2360!/:4.0] {}
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Linux (amd64) version 5.15.0-117-generic
+	Java Version: 21.0.4, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 1698797536 bytes (1620 MiB) / 2147483648 bytes (2048 MiB) up to 4294967296 bytes (4096 MiB)
+	CPUs: 2
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD EPYC 7F72 24-Core Processor
+	Identifier: AuthenticAMD Family 23 Model 49 Stepping 0
+	Microarchitecture: Zen 2
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 24
+	Number of logical CPUs: 48
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MiB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 129820.58
+	Virtual memory used (MiB): 126253.99
+	Swap memory total (MiB): 1024.00
+	Swap memory used (MiB): 112.43
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 133564.75, total: 223120.39
+	Space in storage for workdir (MiB): available: 133564.75, total: 223120.39
+	JVM Flags: 2 total; -Xmx4096M -Xms2048M
+	ModLauncher: 11.0.4+main.d2e20e43
+	ModLauncher launch target: forgeserver
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.34.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.34.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.34.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.4.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.4.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		kotlinforforge@5.7.0
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		architectury-13.0.8-neoforge.jar                  |Architectury                  |architectury                  |13.0.8              |Manifest: NOSIGNATURE
+		athens_coins-neoforge-0.2-1.21.jar                |Athens Coins                  |athens_coins                  |0.2-1.21            |Manifest: NOSIGNATURE
+		cloth-config-15.0.140-neoforge (1).jar            |Cloth Config v15 API          |cloth_config                  |15.0.140            |Manifest: NOSIGNATURE
+		Clumps-neoforge-1.21.1-19.0.0.1.jar               |Clumps                        |clumps                        |19.0.0.1            |Manifest: NOSIGNATURE
+		collective-1.21.1-7.87 (1).jar                    |Collective                    |collective                    |7.87                |Manifest: NOSIGNATURE
+		crabclaws-neoforge-1.21-1.2.0.jar                 |Crab Claws                    |crabclaws                     |1.2.0               |Manifest: NOSIGNATURE
+		CreativeCore_NEOFORGE_v2.12.27_mc1.21.1.jar       |CreativeCore                  |creativecore                  |2.12.27             |Manifest: NOSIGNATURE
+		[1.21-neoforge]-Epic-Knights-9.22.jar             |Epic Knights: Shields, Armor a|magistuarmory                 |9.22                |Manifest: NOSIGNATURE
+		ExtremeSoundMuffler-3.48.3_NeoForge-1.21.jar      |Extreme Sound Muffler         |extremesoundmuffler           |3.48.3              |Manifest: NOSIGNATURE
+		fastfood-1.1.0-neoforge-1.21.1.jar                |fastfood                      |fastfood                      |1.0.0               |Manifest: NOSIGNATURE
+		ferritecore-7.0.2-neoforge.jar                    |Ferrite Core                  |ferritecore                   |7.0.2               |Manifest: 41:ce:50:66:d1:a0:05:ce:a1:0e:02:85:9b:46:64:e0:bf:2e:cf:60:30:9a:fe:0c:27:e0:63:66:9a:84:ce:8a
+		ForgeConfigAPIPort-v21.1.3-1.21.1-NeoForge.jar    |Forge Config API Port         |forgeconfigapiport            |21.1.3              |Manifest: NOSIGNATURE
+		fabric-api-base-0.4.42+d1308ded19.jar             |Forgified Fabric API Base     |fabric_api_base               |0.4.42+d1308ded19   |Manifest: NOSIGNATURE
+		fabric-block-view-api-v2-1.0.10+9afaaf8c19.jar    |Forgified Fabric BlockView API|fabric_block_view_api_v2      |1.0.10+9afaaf8c19   |Manifest: NOSIGNATURE
+		fabric-renderer-api-v1-3.4.0+acb05a3919.jar       |Forgified Fabric Renderer API |fabric_renderer_api_v1        |3.4.0+acb05a3919    |Manifest: NOSIGNATURE
+		fabric-rendering-data-attachment-v1-0.3.48+73761d2|Forgified Fabric Rendering Dat|fabric_rendering_data_attachme|0.3.48+73761d2e19   |Manifest: NOSIGNATURE
+		framework-neoforge-1.21.1-0.9.4.jar               |Framework                     |framework                     |0.9.4               |Manifest: NOSIGNATURE
+		ftb-essentials-neoforge-2101.1.1_SERVERONLY.jar   |FTB Essentials                |ftbessentials                 |2101.1.1            |Manifest: NOSIGNATURE
+		ftb-library-neoforge-2101.1.7.jar                 |FTB Library                   |ftblibrary                    |2101.1.7            |Manifest: NOSIGNATURE
+		ftb-ultimine-neoforge-2101.1.1.jar                |FTB Ultimine                  |ftbultimine                   |2101.1.1            |Manifest: NOSIGNATURE
+		goldenhopper-neoforge-1.21.1-1.5.6_COPPERHOPPER_RE|Golden Hopper                 |goldenhopper                  |1.5.6               |Manifest: NOSIGNATURE
+		infinitetrading-1.21.1-4.5 (2).jar                |Infinite Trading              |infinitetrading               |4.5                 |Manifest: NOSIGNATURE
+		InventoryProfilesNext-neoforge-1.21-2.1.0.jar     |Inventory Profiles Next       |inventoryprofilesnext         |2.1.0               |Manifest: NOSIGNATURE
+		jei-1.21.1-neoforge-19.21.0.247.jar               |Just Enough Items             |jei                           |19.21.0.247         |Manifest: NOSIGNATURE
+		kffmod-5.7.0.jar                                  |Kotlin For Forge              |kotlinforforge                |5.7.0               |Manifest: NOSIGNATURE
+		libIPN-neoforge-1.21-6.2.0.jar                    |libIPN                        |libipn                        |6.2.0               |Manifest: NOSIGNATURE
+		LuckPerms-NeoForge-5.4.140_SERVERONLY.jar         |LuckPerms                     |luckperms                     |5.4.140             |Manifest: NOSIGNATURE
+		server-1.21.1-20240808.144430-srg.jar             |Minecraft                     |minecraft                     |1.21.1              |Manifest: NOSIGNATURE
+		refurbished_furniture-neoforge-1.21.1-1.0.6.jar   |MrCrayfish's Furniture Mod: Re|refurbished_furniture         |1.0.6               |Manifest: NOSIGNATURE
+		neoforge-21.1.90-universal.jar                    |NeoForge                      |neoforge                      |21.1.90             |Manifest: NOSIGNATURE
+		PuzzlesLib-v21.1.24-1.21.1-NeoForge.jar           |Puzzles Lib                   |puzzleslib                    |21.1.24             |Manifest: NOSIGNATURE
+		reeses-sodium-options-neoforge-1.8.0+mc1.21.3.jar |Reese's Sodium Options        |reeses_sodium_options         |1.8.0+mc1.21.3      |Manifest: NOSIGNATURE
+		voicechat-neoforge-1.21.1-2.5.26.jar              |Simple Voice Chat             |voicechat                     |1.21.1-2.5.26       |Manifest: NOSIGNATURE
+		skinrestorer-2.1.0+1.21-neoforge   (SERVER).jar   |SkinRestorer                  |skinrestorer                  |2.1.0+1.21-neoforge |Manifest: NOSIGNATURE
+		sodium-neoforge-0.6.5+mc1.21.1.jar                |Sodium                        |sodium                        |0.6.5+mc1.21.1      |Manifest: NOSIGNATURE
+		sodium-extra-neoforge-0.6.0+mc1.21.1.jar          |Sodium Extra                  |sodium_extra                  |0.6.0+mc1.21.1      |Manifest: NOSIGNATURE
+		sophisticatedcore-1.21.1-1.0.5.813.jar            |Sophisticated Core            |sophisticatedcore             |1.0.5               |Manifest: NOSIGNATURE
+		sophisticatedstorage-1.21.1-1.0.4.988.jar         |Sophisticated Storage         |sophisticatedstorage          |1.0.4               |Manifest: NOSIGNATURE
+		spark-1.10.109-neoforge.jar                       |spark                         |spark                         |1.10.109            |Manifest: NOSIGNATURE
+		SpikySpikes-v21.1.0-1.21.1-NeoForge.jar           |Spiky Spikes                  |spikyspikes                   |21.1.0              |Manifest: NOSIGNATURE
+		waterframes-NEOFORGE-mc1.21.1-v2.1.9.jar          |WaterFrames                   |waterframes                   |2.1.9               |Manifest: NOSIGNATURE
+		watermedia-2.1.9.jar                              |WaterMedia                    |watermedia                    |2.1.9               |Manifest: NOSIGNATURE
+		YetAnotherConfigLib-3.6.2+1.21-neoforge.jar       |YetAnotherConfigLib           |yet_another_config_lib_v3     |3.6.2+1.21-neoforge |Manifest: NOSIGNATURE
+	Crash Report UUID: 8ba3030c-df39-48aa-a8fd-60b86a21d14a
+	FML: 4.0.34
+	NeoForge: 21.1.90
