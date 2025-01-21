@@ -23,8 +23,7 @@
     "pkg": "^5.8.1"
   },
   "bin": {
-    "fileutiluploader": "uploader.js",
-    "hashMaker": "hash_maker.js"
+    "fileutiluploader": "uploader.js"
   },
   "pkg": {
     "scripts": [
