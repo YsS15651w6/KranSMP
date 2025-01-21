@@ -13,25 +13,35 @@ const SERVER_ID = process.env.EXAROTON_SERVER_ID; // Store the server ID in a .e
 // Allowed MIME types for media files
 const ALLOWED_MIME_TYPES = ['image/jpeg', 'image/png', 'video/mp4', 'video/webm'];
 
+async function promptForPassword() {
+  let authorized = false;
+
+  while (!authorized) {
+    // Prompt for password
+    const passwordInput = await inquirer.prompt([
+      {
+        type: 'password',
+        name: 'password',
+        message: 'Enter your member password (cAsE sEnSiTiVe): ',
+      },
+    ]);
+
+    const hash = enc.hash(passwordInput.password);
+    authorized = await enc.authorize(hash);
+
+    if (!authorized) {
+      console.error('Unauthorized access! Please try again.');
+    }
+  }
+
+  return authorized;
+}
+
 async function main() {
   console.log("Welcome to the Media Uploader!");
 
-  // Prompt for password
-  const passwordInput = await inquirer.prompt([
-    {
-      type: 'password',
-      name: 'password',
-      message: 'Enter your member password (cAsE sEnSiTiVe): ',
-    },
-  ]);
-
-  const hash = enc.hash(passwordInput.password);
-  const authorized = await enc.authorize(hash);
-
-  if (!authorized) {
-    console.error('Unauthorized access!');
-    process.exit(1);
-  }
+  // Ensure authorization first
+  await promptForPassword();
 
   // Prompt for file path
   const fileInput = await inquirer.prompt([
