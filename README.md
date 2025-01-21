@@ -1,5 +1,5 @@
 # KranSMP
-A open-source copy of KranSMP. Passwords are hashed, and this will be updated on every major/minor change to KranSMP.
+An open-source copy of KranSMP. Passwords are hashed, and this will be updated on every major/minor change to KranSMP.
 
 # Why?
 Because. Also we believe that everyone should have a starting point for developing their own server.
