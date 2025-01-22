@@ -30,7 +30,7 @@ public class Main {
 
     public Main() {
         // Frame Setup
-        JFrame frame = new JFrame("FileTool v5.1 stable (build 361.0)");
+        JFrame frame = new JFrame("FileTool v5.1.1 stable (build 363.1 rev 1)");
         frame.setSize(700, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
@@ -157,6 +157,9 @@ public class Main {
             logTextArea.append("File uploaded successfully!\n");
             ongoing = false;
             logUploadData(password, file.getName());
+        } else {
+        	logTextArea.append("Operation cancelled.\n");
+        	ongoing = false;
         }
     }
 
@@ -288,7 +291,11 @@ public class Main {
                 logTextArea.append("Log file updated successfully.\n");
             } else {
                 logTextArea.append("File deletion cancelled.\n");
+                ongoing = false;
             }
+        } else {
+        	logTextArea.append("Operation cancelled.\n");
+        	ongoing = false;
         }
 
     } catch (Exception e) {
