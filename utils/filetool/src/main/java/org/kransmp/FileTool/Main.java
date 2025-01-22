@@ -26,10 +26,11 @@ public class Main {
     private JTextArea logTextArea;
     private JFileChooser fileChooser;
     private JCheckBox darkModeCheckBox;
+    boolean ongoing = false;
 
     public Main() {
         // Frame Setup
-        JFrame frame = new JFrame("FileTool v5.0.2 stable (build 332.1 rev 2)");
+        JFrame frame = new JFrame("FileTool v5.1 stable (build 361.0)");
         frame.setSize(700, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
@@ -55,7 +56,7 @@ public class Main {
         logTextArea.setEditable(false);
         logTextArea.setLineWrap(true);
         logTextArea.setWrapStyleWord(true);
-
+        
         // Layout
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
@@ -77,34 +78,52 @@ public class Main {
     }
 
     private void authenticateAndUpload() {
-        JPasswordField passwordField = new JPasswordField();
-        int option = JOptionPane.showConfirmDialog(null, passwordField, 
-                "Enter your password:", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
-        
-        if (option == JOptionPane.OK_OPTION) {
-            String password = new String(passwordField.getPassword());
-            if (checkHash(password)) {
-                logTextArea.append("Password accepted. Proceeding with file upload...\n");
-                uploadFile(password);
+        if (!ongoing) {
+        	ongoing = true;
+        	JPasswordField passwordField = new JPasswordField();
+            int option = JOptionPane.showConfirmDialog(null, passwordField, 
+                    "Enter your password:", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+            
+            if (option == JOptionPane.OK_OPTION) {
+                String password = new String(passwordField.getPassword());
+                if (checkHash(password)) {
+                    logTextArea.append("Password accepted. Proceeding with file upload...\n");
+                    uploadFile(password);
+                } else {
+                    logTextArea.append("Incorrect password! Please try again.\n");
+                    ongoing = false;
+                }
             } else {
-                logTextArea.append("Incorrect password! Please try again.\n");
+            	logTextArea.append("Operation cancelled.\n");
+            	ongoing = false;
             }
+        } else {
+        	logTextArea.append("Please wait for ongoing operation to finish!\n");
         }
     }
 
     private void authenticateAndDelete() {
-        JPasswordField passwordField = new JPasswordField();
-        int option = JOptionPane.showConfirmDialog(null, passwordField, 
-                "Enter your password:", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
-        
-        if (option == JOptionPane.OK_OPTION) {
-            String password = new String(passwordField.getPassword());
-            if (checkHash(password)) {
-                logTextArea.append("Password accepted. Proceeding with file deletion...\n");
-                deleteFile(password);
+        if (!ongoing) {
+        	ongoing = true;
+        	JPasswordField passwordField = new JPasswordField();
+            int option = JOptionPane.showConfirmDialog(null, passwordField, 
+                    "Enter your password:", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+            
+            if (option == JOptionPane.OK_OPTION) {
+                String password = new String(passwordField.getPassword());
+                if (checkHash(password)) {
+                    logTextArea.append("Password accepted. Proceeding with file deletion...\n");
+                    deleteFile(password);
+                } else {
+                    logTextArea.append("Incorrect password! Please try again.\n");
+                    ongoing = false;
+                }
             } else {
-                logTextArea.append("Incorrect password! Please try again.\n");
+            	logTextArea.append("Operation cancelled.\n");
+            	ongoing = false;
             }
+        } else {
+        	logTextArea.append("Please wait for ongoing operation to finish!\n");
         }
     }
 
@@ -136,6 +155,7 @@ public class Main {
             logTextArea.append("Selected file: " + file.getAbsolutePath() + "\n");
             uploadToServer(file);
             logTextArea.append("File uploaded successfully!\n");
+            ongoing = false;
             logUploadData(password, file.getName());
         }
     }
@@ -248,6 +268,7 @@ public class Main {
                     if (fileName.equals(selectedFile)) {
                         deleteFileFromServer(selectedFile, uploads, i, file);
                         logTextArea.append("File deleted successfully: " + selectedFile + "\n");
+                        ongoing = false;
                         break;
                     }
                 }
