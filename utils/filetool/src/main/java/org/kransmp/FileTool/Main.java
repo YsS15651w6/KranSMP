@@ -19,7 +19,8 @@ public class Main {
     private static final String[] ALLOWED_PASSWORD_HASHES = {                                                                                      
             "4dfd9ae5247e9f8f8338a8416f7161e870260d873cc13317dbff713ec0d10e5c",                                                                    
             "e9ec438626c512bac14bf89609e704dabc683110c8801a684a70da3184d20470",                                                                    
-            "fad803b204984fd088af01e6380bbff8594a661e016a480972dadb4944dbad69"                                                                     
+            "fad803b204984fd088af01e6380bbff8594a661e016a480972dadb4944dbad69",
+            "4c4e6389e976b082a86dbec5fc1078d63e511a620aff4097355c324c7b6ae41f"                                                                     
     };                                                                                                                                             
                                                                                                                                                    
     private JButton uploadButton, deleteButton;                                                                                                    
