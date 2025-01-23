@@ -26,11 +26,12 @@ public class Main {
     private JTextArea logTextArea;
     private JFileChooser fileChooser;
     private JCheckBox darkModeCheckBox;
+    private JPanel buttonPanel, panel;
     boolean ongoing = false;
 
     public Main() {
         // Frame Setup
-        JFrame frame = new JFrame("FileTool v5.1.1 stable (build 363.1 rev 1)");
+        JFrame frame = new JFrame("FileTool v5.1.1 stable (build 386.1 rev 3)");
         frame.setSize(700, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
@@ -58,9 +59,9 @@ public class Main {
         logTextArea.setWrapStyleWord(true);
         
         // Layout
-        JPanel panel = new JPanel();
+        panel = new JPanel();
         panel.setLayout(new BorderLayout());
-        JPanel buttonPanel = new JPanel();
+        buttonPanel = new JPanel();
         buttonPanel.setLayout(new FlowLayout());
         buttonPanel.add(uploadButton);
         buttonPanel.add(deleteButton);
@@ -344,7 +345,7 @@ public class Main {
         boolean isDarkMode = darkModeCheckBox.isSelected();
         Color backgroundColor = isDarkMode ? Color.DARK_GRAY : Color.WHITE;
         Color textColor = isDarkMode ? Color.WHITE : Color.BLACK;
-
+        Color panelColor = isDarkMode ? Color.GRAY : Color.WHITE;
         frame.getContentPane().setBackground(backgroundColor);
         uploadButton.setBackground(isDarkMode ? Color.DARK_GRAY : Color.LIGHT_GRAY);
         uploadButton.setForeground(textColor);
@@ -352,6 +353,11 @@ public class Main {
         deleteButton.setForeground(textColor);
         logTextArea.setBackground(isDarkMode ? Color.DARK_GRAY : Color.WHITE);
         logTextArea.setForeground(isDarkMode ? Color.WHITE : Color.BLACK);
+        buttonPanel.setBackground(panelColor);
+        darkModeCheckBox.setForeground(textColor);
+        darkModeCheckBox.setBackground(backgroundColor);
+        panel.setBackground(backgroundColor);
+        panel.setForeground(backgroundColor);
     }
 
     public static void main(String[] args) {
